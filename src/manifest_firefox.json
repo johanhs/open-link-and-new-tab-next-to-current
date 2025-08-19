@@ -1,0 +1,52 @@
+{
+    "name": "Open Link and New Tab Next to Current",
+    "description": "Open new tabs and links next to your current tab instead of at the end of the tab bar.",
+    "short_name": "Next to current",
+    "homepage_url": "https://github.com/johanhs/open-link-and-new-tab-next-to-current",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "16": "assets/icon16.png",
+        "32": "assets/icon32.png",
+        "48": "assets/icon48.png",
+        "128": "assets/icon128.png"
+    },
+    "background": {
+        "scripts": ["serviceWorker/serviceWorker.js"],
+        "type": "module"
+    },
+    "commands": {
+        "open-new-tab-next-to-current": {
+            "description": "Open new tab next to current",
+            "suggested_key": {
+                "mac": "MacCtrl+R",
+                "windows": "Ctrl+R",
+                "linux": "Ctrl+R"
+            }
+        },
+        "open-link-at-cursor-in-new-tab": {
+            "description": "Open link at cursor in new tab next to current",
+            "suggested_key": {
+                "default": "Alt+R",
+                "mac": "Alt+R",
+                "windows": "Alt+R",
+                "linux": "Alt+R"
+            }
+        }
+    },
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "matches": ["<all_urls>"],
+            "js": ["content/content.js"]
+        }
+    ],
+    "permissions": ["storage", "scripting", "activeTab", "webNavigation"],
+    "host_permissions": ["<all_urls>"],
+    "web_accessible_resources": [
+        {
+            "resources": ["utils/zgetURLAtCursor.js"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}

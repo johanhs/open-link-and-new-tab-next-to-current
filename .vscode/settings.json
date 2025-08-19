@@ -1,0 +1,8 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "eslint.validate": ["typescript"],
+    "eslint.runtime": "node",
+    "eslint.nodeEnv": "v22.18.0",
+    "eslint.nodePath": null
+}

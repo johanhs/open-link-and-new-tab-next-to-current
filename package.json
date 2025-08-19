@@ -1,0 +1,42 @@
+{
+    "name": "open-link-and-new-tab-next-to-current",
+    "packageManager": "yarn@4.9.2",
+    "scripts": {
+        "dev:chrome": "cross-env NODE_ENV=development TARGET=chrome webpack",
+        "dev:firefox": "cross-env NODE_ENV=development TARGET=firefox webpack",
+        "build:chrome": "cross-env NODE_ENV=production TARGET=chrome webpack",
+        "build:firefox": "cross-env NODE_ENV=production TARGET=firefox webpack",
+        "package:chrome": "node scripts/package.js chrome",
+        "package:firefox": "node scripts/package.js firefox",
+        "lint": "eslint --config eslint.config.mjs \"src/**/*.{ts,tsx}\"",
+        "tcheck": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.34.0",
+        "@types/chrome": "^0.1.4",
+        "@types/node": "^24.3.0",
+        "@types/webextension-polyfill": "^0.12.3",
+        "@types/webpack": "^5.28.5",
+        "@typescript-eslint/eslint-plugin": "^8.41.0",
+        "@typescript-eslint/parser": "^8.41.0",
+        "archiver": "^7.0.1",
+        "clean-webpack-plugin": "^4.0.0",
+        "copy-webpack-plugin": "^13.0.1",
+        "cross-env": "^10.0.0",
+        "eslint": "^9.34.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-prettier": "^5.5.4",
+        "eslint-webpack-plugin": "^5.0.2",
+        "prettier": "^3.6.2",
+        "ts-loader": "^9.5.4",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.2",
+        "typescript-eslint": "^8.41.0",
+        "webpack": "^5.101.3",
+        "webpack-cli": "^6.0.1",
+        "webpack-ext-reloader": "^1.1.13"
+    },
+    "dependencies": {
+        "webextension-polyfill": "^0.12.0"
+    }
+}

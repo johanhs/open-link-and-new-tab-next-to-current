@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "esnext",
+        "strict": true,
+        "baseUrl": "./src",
+        "sourceMap": true,
+        "paths": {
+            "content/*": ["./content/*"],
+            "serviceWorker/*": ["./serviceWorker/*"],
+            "assets/*": ["./assets/*"],
+            "utils/*": ["./utils/*"]
+        },
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "moduleResolution": "node",
+        "lib": ["DOM", "ESNext"],
+        "typeRoots": ["./src/types", "./node_modules/@types"],
+        "types": ["chrome", "node"]
+    },
+    "exclude": ["node_modules"]
+}
