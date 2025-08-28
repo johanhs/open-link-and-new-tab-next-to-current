@@ -5,6 +5,12 @@
     "homepage_url": "https://github.com/johanhs/open-link-and-new-tab-next-to-current",
     "version": "1.0",
     "manifest_version": 3,
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{b2c8ed28-4fd4-28f8-b7d4-2d8c793b1a59}",
+            "strict_min_version": "109.0"
+        }
+    },
     "icons": {
         "16": "assets/icon16.png",
         "32": "assets/icon32.png",
